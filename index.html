@@ -1,19 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
     <title>Data Analyst Portfolio - Shubham Saxena</title>
-    <!-- Include Bootstrap CSS for styling -->
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Include your custom CSS file for additional styling -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Internal CSS -->
+    <style>
+        /* Global styles */
+
+        /* Set background color and font color for the entire page */
+        body {
+            background-color: white; /* White background color */
+            color: purple; /* Purple font color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+
+        /* Style the header background and text color */
+        header {
+            background-color: #032B43; /* Dark blue background color */
+            color: #FFD700; /* Shining golden font color */
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Container styles */
+
+        /* Set maximum width, margin, padding, and box sizing for the main content container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        /* Profile section styles */
+
+        /* Align profile image and description */
+        .profile {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        /* Style the profile image */
+        .profile img {
+            max-width: 200px;
+            border-radius: 5%; /* Pentagon shape */
+            margin-right: 1rem;
+        }
+
+        /* Skills section styles */
+
+        /* Arrange skills in a flex layout with wrapping */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        /* Style individual skill items */
+        .skills span {
+            background-color: #f2f2f2; /* Light gray background color for skill tags */
+            color: #333; /* Dark gray font color */
+            padding: 0.3rem 0.8rem;
+            margin: 0.2rem;
+            border-radius: 3px;
+        }
+
+        /* Certifications section styles */
+
+        /* Add margin to certifications section */
+        .certifications {
+            margin-top: 2rem;
+        }
+
+        /* Style certification items */
+        .certification {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        /* Style certification images */
+        .certification img {
+            max-width: 50px;
+            margin-right: 1rem;
+        }
+
+        /* Project section styles */
+
+        /* Add border, padding, and margin to project cards */
+        .project {
+            border: 1px solid #ddd; /* Light gray border */
+            padding: 1rem;
+            margin-top: 2rem;
+            background-color: #fff; /* White background color for project cards */
+        }
+
+        /* Navbar styles */
+
+        /* Style the navbar background and links */
+        .navbar {
+            background-color: #032B43; /* Dark blue navbar background color */
+        }
+
+        /* Change navbar link color and size */
+        .navbar-nav .nav-link {
+            color: navy; /* Navy blue font color for navbar links */
+            font-size: 16px;
+        }
+
+        /* About Me section styles */
+
+        /* Add margin and padding to the About Me section */
+        .about-section {
+            margin-top: 50px;
+            padding: 50px 0;
+        }
+
+        /* Style the profile image */
+        .profile-image {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+
+        /* Skills list styles */
+        .skills-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skills-list li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Projects section styles */
+
+        /* Add margin and padding to the Projects section */
+        .projects-section {
+            margin-top: 50px;
+            padding: 50px 0;
+        }
+
+        /* Style project cards */
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        /* Client Reviews section styles */
+
+        /* Add margin and padding to the Client Reviews section */
+        .reviews-section {
+            margin-top: 50px;
+            padding: 50px 0;
+        }
+
+        /* Style the client review slider */
+        .review-slider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Footer section styles */
+
+        /* Style the footer background and text color */
+        .footer {
+            background-color: #032B43; /* Dark blue footer background color */
+            color: #fff; /* White font color for footer */
+            padding: 20px 0;
+        }
+
+        /* Style social media icons */
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        /* Replace icon styles with your preferred styles (e.g., font-size, color) */
+        .social-icons img {
+            width: 25px;
+            height: 25px;
+        }
+
+        /* Additional styles */
+
+        /* Style the "Welcome to my Portfolio" heading */
+        .welcome-message {
+            font-weight: bold;
+            font-size: 36px; /* Larger font size */
+            color: #FFD700; /* Shining golden color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for shining effect */
+            margin-top: 20px; /* Adjust margin to position it below the navigation bar */
+            text-align: center;
+        }
+
+        /* Profile description style */
+        .profile-description {
+            font-size: 18px;
+            margin-top: 10px; /* Adjust margin to move it closer to the profile pic */
+		}
+		
+		/* Style the title bar */
+        .title-bar {
+            background-color: #032B43;
+			color: #FFD700;
+            text-align: center;
+            padding: 0.5rem 0;
+            font-size: 24px; /* Larger font size for the title */
+        }
+    </style>
+
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- Navbar section -->
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+
+    <!-- Title Bar -->
+    <div class="title-bar">
+        Data Analyst Portfolio - Shubham Saxena
+    </div>
+    
+    <!-- Navbar -->
+<!--   
+ <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <a class="navbar-brand" href="#">
-            <img src="logo.png" alt="Logo"> <!-- Insert your logo image -->
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -21,85 +248,258 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#reviews">Client Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.naukri.com/mnjuser/homepage" target="_blank">Naukri</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a></li>
                 <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
             </ul>
         </div>
     </nav>
-
-    <!-- About Me section -->
+	
+	-->
+	
+    <!-- About Section -->
     <section id="about" class="about-section text-center">
         <div class="container">
-            <h2>About Me</h2>
-            <img src="profile.jpg" alt="Profile Image" class="profile-image"> <!-- Insert your profile image -->
-            <p>Your introduction and details here.</p> <!-- Replace with your actual introduction -->
+            <div class="profile">
+                <img src="C:\Users\user\source\repos\DataAnalystPortfolio\profile.jpg" alt="Profile Image" class="profile-image">
+                <div class="about-me-panel">
+                    <p class="profile-description">Dedicated and solution-driven Data Analyst with a rich and diverse professional background. Experienced in end-to-end management of data operations, incident analysis, code enhancements, and UAT support. Proficient in data transformation, visualization, and interpreting insights to drive informed decisions.</p>
+                </div>
+            </div>
+            <div class="col-md-12 text-center mt-4">
+                <a class="btn btn-primary" href="your_resume_url.pdf" target="_blank">View My Resume</a>
+				<!-- LinkedIn Profile Button -->
+				<a class="btn btn-primary" href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a>
+				<!-- Scroll to Footer Button -->
+				<a class="btn btn-secondary" href="#footer">Contact</a>
+
+
+            </div>
+            <div class="col-md-12 text-center">
+                <h3 class="welcome-message">Skills</h3>
+                <div style="position: relative; height: 300px;">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Projects section -->
+    <!-- Project Section -->
     <section id="projects" class="projects-section">
-        <div class="container text-center">
-            <h2>Projects</h2>
-            <div class="row">
-                <!-- Project 1 card -->
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <h3>Excel Dashboard and Datastory</h3>
-                        <p>Account Sales Data at JP Morgan</p>
-                        <p>Tanya Sales Annual Report</p>
-                    </div>
-                </div>
-                <!-- Project 2 card -->
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <h3>Power BI Project</h3>
-                    </div>
-                </div>
-                <!-- Project 3 card -->
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <h3>SQL Project</h3>
-                    </div>
-                </div>
+        <h2>My Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Project details here.</p>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Project details here.</p>
+            </div>
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Project details here.</p>
             </div>
         </div>
     </section>
-
-    <!-- Client Reviews section -->
-    <section id="reviews" class="reviews-section text-center">
-        <div class="container">
-            <h2>Client Reviews</h2>
-            <div class="review-slider">
-                <div class="review active">
-                    <p>Client review 1 goes here.</p>
+	
+		<!-- Dashboard Images Section -->
+<!--
+<section id="dashboard" class="dashboard-section text-center">
+    <div class="container">
+        <h2>My Dashboard Creations</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="dashboard-card">
+                    <a href="dashboard.html">
+                        <h3>Dashboard 1</h3>
+                    </a>
+                    <p>Tanya_Sales_Annual_Report : Tanya, a retail company, seeks an enriched annual report for insights into enhancing sales strategies.</p>
                 </div>
-                <div class="review">
-                    <p>Client review 2 goes here.</p>
-                </div>
-                <!-- Add more reviews as needed -->
             </div>
+	-->		
+			
+            <!-- Repeat for other dashboard images -->
+  <!--
+  <div class="row">
+            <div class="col-md-4">
+                <div class="dashboard-card">
+                    <a href="dashboard2.html">
+                        <h3>Dashboard 2</h3>
+                    </a>
+                    <p>Generate a dashboard from the JPMC dataset to assess unit sales, top accounts, and marketing program effectiveness, then extract insights for submission.</p>
+                </div>
+            </div>
+		</div>	
+    </div>
+</section>
+-->
+		
+<!-- Dashboard Images Section -->
+<section id="dashboard" class="dashboard-section text-center">
+    <div class="container">
+        <h2>My Dashboard Creations</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="dashboard-card">
+                    <a href="dashboard.html">
+                        <h3>Dashboard 1</h3>
+                    </a>
+                    <p>Tanya_Sales_Annual_Report : Tanya, a retail company, seeks an enriched annual report for insights into enhancing sales strategies.</p>
+                </div>
+            </div>
+            <div class="col-md-4"> <!-- Add this div for the second dashboard -->
+                <div class="dashboard-card">
+                    <a href="dashboard2.html">
+                        <h3>Dashboard 2</h3>
+                    </a>
+                    <p>Generate a dashboard from the JPMC dataset to assess unit sales, top accounts, and marketing program effectiveness, then extract insights for submission.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Client Review Slider Section -->
+    <section id="reviews" class="reviews-section">
+        <h2>Client Reviews</h2>
+        <div class="review-slider">
+            <!-- Client reviews here -->
         </div>
     </section>
 
-    <!-- Footer section -->
-    <footer id="footer" class="footer text-center">
-        <div class="container">
-            <p>&copy; 2023 Shubham Saxena</p> <!-- Replace with your name and year -->
-            <div class="social-icons">
-                <!-- Social media icons with links -->
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+    	
+    <!-- Footer Section -->
+	<!-- Footer Section -->
+<footer id="footer" class="footer">
+    <div class="footer-content">
+        <div class="text-right">
+            <div>
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+                    <img src="https://www.iconfinder.com/icons/317750/linkedin_icon" alt="LinkedIn">
+                </a>
+                <a href="https://www.naukri.com/mnjuser/homepage" target="_blank">
+                    <img src="URL_TO_NAUKRI_ICON" alt="Naukri">
+                </a>
+            </div>
+            <div style="height: 300px;">
+                <canvas id="analyticsChart"></canvas>
             </div>
         </div>
-    </footer>
+        <div>
+            <p>&copy; 2023 Shubham Saxena</p>
+            <p><i class="fa fa-envelope"></i> Email: shubham786.saxena@gmail.com</p>
+            <p><i class="fa fa-phone"></i> Phone: 9005948555</p>
+        </div>
+    </div>
+</footer>
 
-    <!-- Include jQuery, Popper.js, Bootstrap JS, and your custom script -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+
+	
+	<script>
+        // Skill data (modify as needed)
+        const skillData = {
+            labels: ['Microsoft Excel', 'Power BI', 'Unix', 'SQL', 'PostgreSQL', 'Production Support', 'Technical Skills Training', 'Agile Tools'],
+            datasets: [{
+                label: 'Basic',
+                data: [3, 2, 1, 1, 0, 3, 2, 1], // Modify skill levels (0 to 3) as needed
+                backgroundColor: 'rgba(75, 192, 192, 0.6)'
+            }, {
+                label: 'Intermediate',
+                data: [3, 1, 2, 1, 1, 1, 2, 0], // Modify skill levels (0 to 3) as needed
+                backgroundColor: 'rgba(255, 159, 64, 0.6)'
+            }, {
+                label: 'Advanced',
+                data: [3, 0, 0, 1, 2, 0, 0, 0], // Modify skill levels (0 to 3) as needed
+                backgroundColor: 'rgba(255, 99, 132, 0.6)'
+            }]
+        };
+
+        // Chart options
+        const chartOptions = {
+            indexAxis: 'y', // Display skills horizontally
+            plugins: {
+                legend: {
+                    position: 'right', // Position the legend to the right
+                    labels: {
+                        usePointStyle: true // Use point style legend for each dataset
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    stacked: true
+                }
+            }
+        };
+
+        // Create a skills chart
+        const skillsChart = new Chart(document.getElementById('skillsChart'), {
+            type: 'bar',
+            data: skillData,
+            options: chartOptions
+        });
+    </script>
+
+    <!-- Google Analytics Tracking Code (Replace with your actual tracking code) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_TRACKING_ID');
+    </script>
+
+    <script>
+        // Function to fetch analytics data from Google Analytics
+        function fetchAnalyticsData() {
+            // Implement code to fetch analytics data here
+            // For this example, you can mock data
+            return {
+                labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
+                data: [10, 20, 15, 25, 30]
+            };
+        }
+
+        // Load analytics data and create line graph
+        function loadAnalytics() {
+            const analyticsData = fetchAnalyticsData();
+            const analyticsChart = new Chart(document.getElementById('analyticsChart'), {
+                type: 'line',
+                data: {
+                    labels: analyticsData.labels,
+                    datasets: [{
+                        label: 'Number of Visitors',
+                        data: analyticsData.data,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 2,
+                        fill: true
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Call the function to load analytics when the page is fully loaded
+        window.addEventListener('load', loadAnalytics);
+    </script>
+	<!-- Include Bootstrap and jQuery scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
+
+
 
